@@ -1,36 +1,8 @@
-#  This version is modded for Pi Zero W Oct 2018
-#!/usr/bin/python
-#--------------------------------------
-#
-#                mypizero.py
-#  Functions to display Pi properties
-#
-#  If called directly outputs :
-#  - Pi Model
-#  - Revision number
-#  - Serial number
-#  - Python version
-#  - I2C,SPI and Bluetooth status
-#  - Mac address
-#  - IP address
-#  - CPU temperature
-#  - GPU temperature
-#
-# Author : Matt Hawkins
-# Date   : 06/12/2017
-#
-# https://www.raspberrypi-spy.co.uk/
-#
-#--------------------------------------
-#!/usr/bin/python
-
 import platform
 import subprocess
 import os
 
 from twython import Twython
-
-
 
 def getModel():
 
@@ -57,7 +29,7 @@ def getSerial():
 
 def getRevision():
 
-myrevision = "Error"
+  myrevision = "Error"
   try:
     f = open('/proc/cpuinfo','r')
     for line in f:
