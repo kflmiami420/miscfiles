@@ -12,7 +12,8 @@ counter = 1
 while True:
     data = bme280.sample(bus, address, calibration_params)
     with open("sample.log","a+") as f:
-        f.write(layout.format(counter, data.timestamp, data.temperature, data.p$
+        f.write(layout.format(counter, data.timestamp, data.temperature, data.pressure, data.humidity) + "\n")
+
     f.close()
     counter += 1
     time.sleep(5)
