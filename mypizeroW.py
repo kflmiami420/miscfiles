@@ -1,3 +1,4 @@
+# cat /proc/cpuinfo
 import platform
 import subprocess
 import os
