@@ -2,12 +2,14 @@
 Finally, you must configure the Raspberry Pi so it executes the Python app on startup. In a terminal window, navigate to the folder where you extracted the project files.
 Then make the project’s Bash script file executable by executing the following command:
 
---chmod +x start-station.sh
+--chmod +x startup.sh
 
 Next, open the Pi user’s session autostart file using the following command:
 
 --sudo nano ~/.config/lxsession/LXDE-pi/autostart
 sudo nano /etc/rc.local
+
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 
 
 
