@@ -1,32 +1,35 @@
 # Start the App Automatically
+
+
+nano startup.sh
+
+include the following below --------------------------------------------------------
+
+#!/bin/bash
+
+# How To Autostart Apps In Rasbian LXDE Desktop
+# http://www.raspberrypi-spy.co.uk/2014/05/how-to-autostart-apps-in-rasbian-lxd$
+
+echo "Starting "
+sudo python /home/pi/weather_station10.py
+sudo python /home/pi/stats.py
+
+crtl+X to save 
+
+
 Finally, you must configure the Raspberry Pi so it executes the Python app on startup. In a terminal window, navigate to the folder where you extracted the project files.
 Then make the project’s Bash script file executable by executing the following command:
 
---chmod +x startup.sh
+---------------chmod +x startup.sh
 
 Next, open the Pi user’s session autostart file using the following command:
 
---sudo nano ~/.config/lxsession/LXDE-pi/autostart
-sudo nano /etc/rc.local
-
-sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-
-
-
-
-
+---------------sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 
 Add the following line to the end (bottom) of the file:
 
-
-
 ---------------@lxterminal -e /home/pi/startup.sh
 
-
-
-/home/pi/enviroplus-python/examples/auto.py
-
-sudo python /home/pi/enviroplus-python/examples/auto.py
 
 
 
